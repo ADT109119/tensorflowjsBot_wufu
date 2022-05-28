@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+.chatbotMessageWindow{
+	background: rgba(55, 150, 250, 1.0);
+	border-radius: 1rem;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.chatbotMessageWindow.close{
+	display: block;
+	height: 4rem;
+	width: 4rem;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 2rem;
+	cursor: pointer;
+
+}
+
+.chatbotMessageWindow.close div{
+	display: none;
+}
+
+.chatbotMessageWindow .openWindow{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 4rem;
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-right: 1rem;
+	font-size: 2rem;
+	display: none;
+}
+
+.chatbotMessageWindow.close .openWindow{
+	display: block;
+}
+
+.chatbotMessageWindow.fixed{
+	position: fixed;
+}
+
+.chatbotMessageWindow.right{
+	right: 0;
+}
+
+.chatbotMessageWindow.left{
+	left: 0;
+}
+
+.chatbotMessageWindow.top{
+	top: 0;
+}
+
+.chatbotMessageWindow.bottom{
+	bottom: 0;
+}
+
+.chatbotMessageWindow .headFunc{
+	flex: 1;
+	text-align: right;
+}
+
+.chatbotMessageWindow .headFunc span.closeWindow{
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-right: 1rem;
+	font-size: 2rem;
+}
+
+.chatbotMessageWindow .displayMessage{
+	flex: 8;
+	background: var(--displayBackground);
+	margin: 1px;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	
+}
+
+.chatbotMessageWindow .displayMessage .replyMessage{
+	margin: 0.1rem;
+	border-radius: 0.5rem;
+	font-size: 1.2rem;
+	max-width: 70%;
+	word-break: break-all;
+	padding: 0.1rem;
+	font-weight: bold;
+}
+
+.chatbotMessageWindow .displayMessage .replyMessage img{
+	width: 100%;
+}
+
+.chatbotMessageWindow .displayMessage .replyMessage.you{
+	background: rgba(75, 170, 255, 1.0);
+	color: #FFFFFF;
+	text-align: right;
+	align-self: flex-end;
+}
+
+.chatbotMessageWindow .displayMessage .replyMessage.bot{
+	background: rgba(230, 230, 230, 1.0);
+	color: #000000;
+	align-self: flex-start;
+}
+
+.chatbotMessageWindow .sendMessage{
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	background: rgba(241, 245, 248, 1.0);
+}
+
+.chatbotMessageWindow .sendMessage input{
+	flex: 15;
+	border-radius: 5px;
+}
+
+.chatbotMessageWindow .sendMessage input:focus{
+	border: 2px solid rgba(75, 170, 255, 1.0);
+}
+
+.chatbotMessageWindow .sendMessage .sendMessageButton{
+	cursor: pointer;
+	display: flex;
+	height: auto;
+	padding: 0 0.5rem;
+	flex: 1;
+}

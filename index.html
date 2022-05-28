@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+
+<link rel="stylesheet" type="text/css" href="css/embedCSS.css">
+</head>
+
+<body>
+	
+	<div class="chatbotMessageWindow fixed right bottom" data-token="HTeNXH6HHpQAsGtcxHY3qIEObh2JKw" style="--displayBackground:#FFFFFF">
+		<div class="headFunc">
+			<h1 style="float: left; color: #FFFFFF;">五福社區小助手</h1>
+			<!--span class="closeWindow">×</span-->
+		</div>
+		
+		<div class="displayMessage">
+		</div>
+		
+		<div class="sendMessage">
+			<input type="text">
+			<span class="sendMessageButton">
+				<svg id="sendMessageButtonIcon" data-name="sendMessageButtonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.46 366.4"><defs><style>.cls-1{fill:#00b1ff;}</style></defs><path class="cls-1" d="M547.76,790.36V647.84l301.39-40.19v-1L547.89,566.45V424L975.23,607.13Z" transform="translate(-547.76 -423.96)"/></svg>
+			</span>
+		</div>
+	</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+<script src="https://pulipulichen.github.io/jieba-js/jquery.js"></script>
+<script src="https://pulipulichen.github.io/jieba-js/require-jieba-js.js"></script>
+
+<script>
+	var model;
+	async function init(){
+		model = await tf.loadLayersModel('./assets/model.json');
+		console.log("load model... ...");
+	}
+
+	init();
+</script>
+
+<script src="js/chatbotMessageWindow.js"></script>
+</body>
+</html>
